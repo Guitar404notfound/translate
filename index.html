@@ -20,6 +20,10 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
+		.fieldset-wrapper:hover {
+		    transform: scale(1.05);
+		    transition: transform 0.3s ease;
+		}
         
         #wrapper1 {
             border: 1px solid #aac8e4;
@@ -59,10 +63,10 @@
 		field-icon{
 			margin-right:8px;
 			color:black;
-			transition:all 1s ease;
+			transition:all 3s ease;
 		}
 		field-icon:hover{
-			transform:translateY(-2px) rotate(30deg);
+			transform:translateY(-2px) rotate(270deg);
 		}
         
         input:focus, select:focus, textarea:focus {
@@ -247,11 +251,11 @@
 						<i class="fa-solid fa-graduation-cap field-icon"></i>
                         <label>学历</label>
                         <select name="education">
-                            <option value="bachelor">本科</option>
+                            <option value="primary">小学</option>
                             <option value="middle">初中</option>
                             <option value="high">高中/职高/中专</option>
                             <option value="college">大专</option>
-                            <option value="primary">小学</option>
+                            <option value="bachelor">本科</option>
                             <option value="master">硕士</option>
                             <option value="doctor">博士</option>
                         </select>
@@ -486,7 +490,7 @@
         });
 		document.querySelectorAll('.field-icon').forEach(icon => {
 		    icon.addEventListener('mouseover', () => {
-	        icon.style.transform = 'translateY(-3px) rotate(15deg)';
+	        icon.style.transform = 'translateY(-3px) rotate(60deg)';
 				});
 		    icon.addEventListener('mouseout', () => {
 		    icon.style.transform = '';
